@@ -1,23 +1,20 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+let pass1 = document.getElementById("password")
+let pass2 = document.getElementById("confirm")
+pass1.addEventListener("keyup", checkPass)
+pass2.addEventListener("keyup", checkPass )
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+function checkPass () {
+  if (pass1.value != "") {
+    if (pass1.value != pass2.value) {
+      pass2.style.border = "3px solid red"
+    } else if (pass1.value == pass2.value) {
+      pass2.style.border = "3px solid green"
+    }
+      else {
+        pass2.style.border = "3px solid red"
+      }
+  }
+}
 
-setupCounter(document.querySelector('#counter'))
+  
+  

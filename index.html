@@ -3,11 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <main class="main">
+      <div class="logo">
+        <div class="image">
+          <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="odin logo">
+        <h1>ODIN</h1>
+        </div>
+      </div>
+      <div class = form-div>
+        <div class="header">
+          <p class="head-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+          <p class="sub-text">You <em>know</em> you want to.</p>
+        </div>
+        <div class="form">
+          <h2>Let's do this!</h2>
+          <form action="#">
+            <div class="form-group">
+            <label for="fname">FIRST NAME</label>
+            <input type="text" name="fname" id="fname" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+          </div>
+          <div class="form-group">
+            <label for="lname">LAST NAME</label>
+            <input type="text" name="lname" id="lname" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+          </div>
+            <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">PHONE NUMBER</label>
+              <input type="text" name="phone" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4">
+            </div>
+            <div class="form-group">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+            </div>
+            <div class="form-group">
+              <label for="confirm">CONFIRM PASSWORD</label>
+              <input type="password" name="confirm" id="confirm" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
+            </div>
+            <div class="form-group button">
+              <button class="submit" type="submit">Create Account</button>
+              <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+    </main>
+    <script src="/main.js"></script>
   </body>
 </html>
